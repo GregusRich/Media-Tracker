@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Media Tracker</name>
+    </assembly>
+    <members>
+        <member name="T:Media_Tracker.Model.Book">
+            <inheritdoc/>
+        </member>
+        <member name="P:Media_Tracker.Model.Book.BookTitle">
+            <inheritdoc cref="F:Media_Tracker.Model.Book.bookTitle"/>
+        </member>
+        <member name="P:Media_Tracker.Model.Book.Author">
+            <inheritdoc cref="F:Media_Tracker.Model.Book.author"/>
+        </member>
+        <member name="P:Media_Tracker.Model.Book.ReleaseDate">
+            <inheritdoc cref="F:Media_Tracker.Model.Book.releaseDate"/>
+        </member>
+        <member name="P:Media_Tracker.Model.Book.Rating">
+            <inheritdoc cref="F:Media_Tracker.Model.Book.rating"/>
+        </member>
+        <member name="P:Media_Tracker.Model.Book.IsCompleted">
+            <inheritdoc cref="F:Media_Tracker.Model.Book.isCompleted"/>
+        </member>
+        <member name="T:Media_Tracker.Model.Movie">
+            <inheritdoc/>
+        </member>
+        <member name="P:Media_Tracker.Model.Movie.MovieTitle">
+            <inheritdoc cref="F:Media_Tracker.Model.Movie.movieTitle"/>
+        </member>
+        <member name="P:Media_Tracker.Model.Movie.MovieLength">
+            <inheritdoc cref="F:Media_Tracker.Model.Movie.movieLength"/>
+        </member>
+        <member name="P:Media_Tracker.Model.Movie.ReleaseDate">
+            <inheritdoc cref="F:Media_Tracker.Model.Movie.releaseDate"/>
+        </member>
+        <member name="P:Media_Tracker.Model.Movie.IsCompleted">
+            <inheritdoc cref="F:Media_Tracker.Model.Movie.isCompleted"/>
+        </member>
+        <member name="T:Media_Tracker.Model.TvShow">
+            <inheritdoc/>
+        </member>
+        <member name="P:Media_Tracker.Model.TvShow.TvShowTitle">
+            <inheritdoc cref="F:Media_Tracker.Model.TvShow.tvShowTitle"/>
+        </member>
+        <member name="P:Media_Tracker.Model.TvShow.EpisodeLength">
+            <inheritdoc cref="F:Media_Tracker.Model.TvShow.episodeLength"/>
+        </member>
+        <member name="P:Media_Tracker.Model.TvShow.ReleaseDate">
+            <inheritdoc cref="F:Media_Tracker.Model.TvShow.releaseDate"/>
+        </member>
+        <member name="P:Media_Tracker.Model.TvShow.IsCompleted">
+            <inheritdoc cref="F:Media_Tracker.Model.TvShow.isCompleted"/>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BookTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BookTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Author">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Author" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ReleaseDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ReleaseDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Rating">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Rating" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MovieTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MovieTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MovieLength">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MovieLength" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TvShowTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TvShowTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EpisodeLength">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EpisodeLength" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BookTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BookTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Author">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Author" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ReleaseDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ReleaseDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Rating">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Rating" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MovieTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MovieTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MovieLength">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MovieLength" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TvShowTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TvShowTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EpisodeLength">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EpisodeLength" generated properties.</summary>
+        </member>
+    </members>
+</doc>
