@@ -29,7 +29,7 @@
     <AppXManifest Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-06T03:46:28.395</Modified>
+      <Modified>2023-12-06T04:11:50.545</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.dll">
       <PackagePath>Media Tracker.dll</PackagePath>
-      <Modified>2023-12-06T03:46:27.532</Modified>
+      <Modified>2023-12-06T04:11:49.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Media Tracker.exe</PackagePath>
-      <Modified>2023-12-06T03:46:27.561</Modified>
+      <Modified>2023-12-06T04:11:49.496</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\grego\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -927,7 +927,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.deps.json">
       <PackagePath>Media Tracker.deps.json</PackagePath>
-      <Modified>2023-12-06T03:46:28.298</Modified>
+      <Modified>2023-12-06T04:11:50.351</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

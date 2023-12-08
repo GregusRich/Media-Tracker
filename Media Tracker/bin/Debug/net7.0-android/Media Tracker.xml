@@ -37,6 +37,9 @@
         <member name="P:Media_Tracker.Model.Movie.IsCompleted">
             <inheritdoc cref="F:Media_Tracker.Model.Movie.isCompleted"/>
         </member>
+        <member name="P:Media_Tracker.Model.Movie.IsReleased">
+            <inheritdoc cref="F:Media_Tracker.Model.Movie.isReleased"/>
+        </member>
         <member name="T:Media_Tracker.Model.TvShow">
             <inheritdoc/>
         </member>
@@ -51,6 +54,31 @@
         </member>
         <member name="P:Media_Tracker.Model.TvShow.IsCompleted">
             <inheritdoc cref="F:Media_Tracker.Model.TvShow.isCompleted"/>
+        </member>
+        <member name="T:Media_Tracker.ViewModel.MovieViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.AllMovies">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.allMovies"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.AvailableMovies">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.availableMovies"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.UpcomingMovies">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.upcomingMovies"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.CompletedMovies">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.completedMovies"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.SelectedCategory">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.selectedCategory"/>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.MovieViewModel.showMovieListCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.ShowMovieListCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.ShowMovieListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.ShowMovieList"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
@@ -79,11 +107,29 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MovieLength">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MovieLength" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsReleased">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsReleased" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TvShowTitle">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TvShowTitle" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EpisodeLength">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EpisodeLength" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AllMovies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AllMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AvailableMovies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AvailableMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UpcomingMovies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UpcomingMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompletedMovies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompletedMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCategory">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -112,11 +158,29 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MovieLength">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MovieLength" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsReleased">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsReleased" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TvShowTitle">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TvShowTitle" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EpisodeLength">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EpisodeLength" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AllMovies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AllMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AvailableMovies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AvailableMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UpcomingMovies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UpcomingMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompletedMovies">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompletedMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCategory">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
         </member>
     </members>
 </doc>

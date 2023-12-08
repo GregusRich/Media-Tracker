@@ -16,7 +16,7 @@ namespace Media_Tracker.Model
         [ObservableProperty]
         bool isCompleted;
 
-        // This property is computed each time it's called.
-        public bool IsReleased => DateTime.Today >= ReleaseDate;
+        [ObservableProperty]
+        bool isReleased;
     }
 }

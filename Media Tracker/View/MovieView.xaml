@@ -2,11 +2,79 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Media_Tracker.View.MovieView"
-             Title="MovieView">
+             Title="Movies">
+
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <!-- Header label for the page -->
+        <Label Text="Movies"
+               FontSize="Large"
+               HorizontalOptions="Start"
+               Margin="10" />
+
+        <!-- Scrollable list for movies -->
+        <CollectionView x:Name="MoviesListView"
+                        BindingContext="{x:Reference MovieViewModel}"
+                        ItemsSource="{Binding AllMovies}"
+                        HeightRequest="300"
+                        Margin="10">
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Custom layout for each item in the list -->
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding MovieTitle}"
+                               Grid.Column="0" />
+                        <Label Text="{Binding ReleaseDate, StringFormat='{0:MM/dd/yyyy}'}"
+                               Grid.Column="1" />
+                        <CheckBox IsChecked="{Binding IsCompleted}"
+                                  Grid.Column="2" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Category selection -->
+        <HorizontalStackLayout Margin="10"
+                               Spacing="50">
+            <Label Text="Select Category"
+                   VerticalOptions="Center" />
+            <Picker x:Name="CategoryPicker"
+                    Title="Category"
+                    SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                    HorizontalOptions="FillAndExpand">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>All Movies</x:String>
+                        <x:String>Upcoming Movies</x:String>
+                        <x:String>Available Movies</x:String>
+                        <x:String>Completed Movies</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Go"
+                    Command="{Binding ShowMovieListCommand}"
+                    HorizontalOptions="End"
+                    Style="{StaticResource PrimaryButton}" />
+        </HorizontalStackLayout>
+
+        <!-- Action buttons -->
+        <HorizontalStackLayout Margin="10,40,0,0"
+                               Spacing="20"
+                               HorizontalOptions="Fill">
+            <Button Text="  Add   "
+                    Command="{Binding AddMovieCommand}"
+                    HorizontalOptions="FillAndExpand"
+                    Style="{StaticResource SecondaryButton}" />
+            <Button Text="Delete"
+                    Command="{Binding DeleteMovieCommand}"
+                    HorizontalOptions="FillAndExpand"
+                    Style="{StaticResource SecondaryButton}" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

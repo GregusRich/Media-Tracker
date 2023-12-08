@@ -6,15 +6,27 @@
     xmlns:views="clr-namespace:Media_Tracker.View"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:MainPage}"
-        Route="MainPage" />
+    <TabBar>
 
-    <ShellContent
-        Title="Movies"
-        ContentTemplate="{DataTemplate views:MovieView}"
-        Route="MovieView" />
-    
-    
+        <!-- Define the Tab for the Home page -->
+        <Tab Title="Home" Icon="home_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage" />
+        </Tab>
+
+        <!-- Define the Tab for the Movies page -->
+        <Tab Title="Movies" Icon="movies_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate views:MovieView}" Route="MovieView" />
+        </Tab>
+
+        <!-- Define the Tab for the TV Shows page -->
+        <Tab Title="TV Shows" Icon="tvshows_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate views:TvShowView}" Route="TvShowView" />
+        </Tab>
+
+        <!-- Define the Tab for the Books page -->
+        <Tab Title="Books" Icon="books_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate views:BookView}" Route="BookView" />
+        </Tab>
+
+    </TabBar>
 </Shell>

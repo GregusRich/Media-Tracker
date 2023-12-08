@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
         this.BindingContext = viewModel;
     }
 
-    private async void OnViewMediaClicked(object sender, EventArgs e)
+    public async void OnViewMediaClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("//MovieView");
     }
