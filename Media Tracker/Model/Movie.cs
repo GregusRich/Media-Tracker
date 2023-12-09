@@ -5,18 +5,18 @@ namespace Media_Tracker.Model
     public partial class Movie : ObservableObject 
     {
         [ObservableProperty]
-        string movieTitle;
+        private string movieTitle;
 
         [ObservableProperty]
-        double movieLength;
+        private double movieLength;
 
         [ObservableProperty]
-        DateTime releaseDate;
+        private DateTime releaseDate;
 
         [ObservableProperty]
-        bool isCompleted;
+        private bool isCompleted;
 
         [ObservableProperty]
-        bool isReleased;
+        private bool isReleased;
     }
 }

@@ -22,6 +22,9 @@ namespace Media_Tracker.ViewModel
         ObservableCollection<Movie> completedMovies;
 
         [ObservableProperty]
+        ObservableCollection<Movie> displayedMovies;
+
+        [ObservableProperty]
         string selectedCategory = "All Movies"; // Set "All Movies" as the default selected category
 
         public MovieViewModel()
@@ -44,16 +47,7 @@ namespace Media_Tracker.ViewModel
             AvailableMovies = new ObservableCollection<Movie>();
             UpcomingMovies = new ObservableCollection<Movie>();
             CompletedMovies = new ObservableCollection<Movie>();
-
-            LoadMovies();
-        }
-
-        private void LoadMovies()
-        {
-            AddAllMoviesToList();
-            FilterAvailableMovies();
-            FilterUpcomingMovies();
-            FilterCompletedMovies();
+            DisplayedMovies = AllMovies; // Start by showing all movies
         }
 
         [RelayCommand]
@@ -62,26 +56,20 @@ namespace Media_Tracker.ViewModel
             switch (SelectedCategory)
             {
                 case "All Movies":
-                    AddAllMoviesToList();
+                    DisplayedMovies = AllMovies;
                     break;
                 case "Available Movies":
                     FilterAvailableMovies();
+                    DisplayedMovies = AvailableMovies;
                     break;
                 case "Upcoming Movies":
                     FilterUpcomingMovies();
+                    DisplayedMovies = UpcomingMovies;
                     break;
                 case "Completed Movies":
                     FilterCompletedMovies();
+                    DisplayedMovies = CompletedMovies;
                     break;
-            }
-        }
-
-        private void AddAllMoviesToList()
-        {
-            AllMovies.Clear();
-            foreach (var movie in AllMovies)
-            {
-                AllMovies.Add(movie);
             }
         }
 
