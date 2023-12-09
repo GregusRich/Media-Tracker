@@ -5,18 +5,21 @@ namespace Media_Tracker.Model
     public partial class TvShow : ObservableObject
     {
         [ObservableProperty]
-        string tvShowTitle;
+        private string tvShowTitle;
 
         [ObservableProperty]
-        double episodeLength;
+        private string tvShowSeason;
 
         [ObservableProperty]
-        DateTime releaseDate;
+        private double episodeLength;
 
         [ObservableProperty]
-        bool isCompleted;
+        private DateTime releaseDate;
 
-        // Computed property that determines if the TV show is released
-        public bool IsReleased => DateTime.Today >= ReleaseDate;
+        [ObservableProperty]
+        private bool isCompleted;
+
+        [ObservableProperty]
+        private bool isReleased;
     }
 }

@@ -46,6 +46,9 @@
         <member name="P:Media_Tracker.Model.TvShow.TvShowTitle">
             <inheritdoc cref="F:Media_Tracker.Model.TvShow.tvShowTitle"/>
         </member>
+        <member name="P:Media_Tracker.Model.TvShow.TvShowSeason">
+            <inheritdoc cref="F:Media_Tracker.Model.TvShow.tvShowSeason"/>
+        </member>
         <member name="P:Media_Tracker.Model.TvShow.EpisodeLength">
             <inheritdoc cref="F:Media_Tracker.Model.TvShow.episodeLength"/>
         </member>
@@ -54,6 +57,9 @@
         </member>
         <member name="P:Media_Tracker.Model.TvShow.IsCompleted">
             <inheritdoc cref="F:Media_Tracker.Model.TvShow.isCompleted"/>
+        </member>
+        <member name="P:Media_Tracker.Model.TvShow.IsReleased">
+            <inheritdoc cref="F:Media_Tracker.Model.TvShow.isReleased"/>
         </member>
         <member name="T:Media_Tracker.ViewModel.MovieViewModel">
             <inheritdoc/>
@@ -82,6 +88,34 @@
         </member>
         <member name="P:Media_Tracker.ViewModel.MovieViewModel.ShowMovieListCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.ShowMovieList"/>.</summary>
+        </member>
+        <member name="T:Media_Tracker.ViewModel.TvShowViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.AllTvShows">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.allTvShows"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.AvailableTvShows">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.availableTvShows"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.UpcomingTvShows">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.upcomingTvShows"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.CompletedTvShows">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.completedTvShows"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.DisplayedTvShows">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.displayedTvShows"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.SelectedCategory">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.selectedCategory"/>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.TvShowViewModel.showTvShowListCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.TvShowViewModel.ShowTvShowListCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.ShowTvShowListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.TvShowViewModel.ShowTvShowList"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
@@ -116,6 +150,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TvShowTitle">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TvShowTitle" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TvShowSeason">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TvShowSeason" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EpisodeLength">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EpisodeLength" generated properties.</summary>
         </member>
@@ -136,6 +173,21 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCategory">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AllTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AllTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AvailableTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AvailableTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UpcomingTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UpcomingTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompletedTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompletedTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayedTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayedTvShows" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -170,6 +222,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TvShowTitle">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TvShowTitle" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TvShowSeason">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TvShowSeason" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EpisodeLength">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EpisodeLength" generated properties.</summary>
         </member>
@@ -190,6 +245,21 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCategory">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AllTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AllTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AvailableTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AvailableTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UpcomingTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UpcomingTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompletedTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompletedTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayedTvShows">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayedTvShows" generated properties.</summary>
         </member>
     </members>
 </doc>
