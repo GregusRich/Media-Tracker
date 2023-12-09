@@ -2,11 +2,112 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Media_Tracker.View.TvShowView"
-             Title="TvShowView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="TV Shows"
+             BackgroundColor="#F5F5F5">
+
+    <VerticalStackLayout Spacing="20">
+
+        <!-- Header label for the page -->
+        <Label Text="TV Shows"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,10,0,10"
+               TextColor="#333333" />
+
+        <!-- Scrollable list for TV Shows -->
+        <CollectionView x:Name="TvShowsListView"
+                        ItemsSource="{Binding DisplayedTvShows}"
+                        HeightRequest="300"
+                        Margin="10"
+                        BackgroundColor="Transparent">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Custom layout for each item in the list -->
+                    <Frame BackgroundColor="White" CornerRadius="10" Padding="10" Margin="5" HasShadow="True">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Tv Show Title -->
+                            <Label Text="{Binding TvShowTitle}"
+                                   Grid.Column="0"
+                                   FontSize="16"
+                                   TextColor="#333333" />
+
+                            <!-- Episode Length -->
+                            <Label Text="{Binding TvShowSeason}"
+                                   Grid.Column="1"
+                                   FontSize="16"
+                                   TextColor="#333333" />
+
+                            <!-- Release Date -->
+                            <Label Text="{Binding ReleaseDate, StringFormat='{0:dd MMM yyyy}'}"
+                                   Grid.Column="2"
+                                   FontSize="16"
+                                   TextColor="#333333" />
+
+                            <!-- Is Completed Checkbox -->
+                            <CheckBox IsChecked="{Binding IsCompleted}"
+                                      Grid.Column="3"
+                                      Color="#4CAF50" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Category selection -->
+        <HorizontalStackLayout Margin="10"
+                               Spacing="20"
+                               HorizontalOptions="Center">
+            <Label Text="Select Category"
+                   VerticalOptions="Center"
+                   TextColor="#333333" />
+            <Picker x:Name="CategoryPicker"
+                    Title="Category"
+                    SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White"
+                    TextColor="#333333">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>All TvShows</x:String>
+                        <x:String>Upcoming TvShows</x:String>
+                        <x:String>Available TvShows</x:String>
+                        <x:String>Completed TvShows</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Go"
+                    Command="{Binding ShowTvShowListCommand}"
+                    HorizontalOptions="End"
+                    BackgroundColor="#6200EA"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+        </HorizontalStackLayout>
+
+        <!-- Action buttons -->
+        <HorizontalStackLayout Margin="20"
+                               Spacing="50"
+                               HorizontalOptions="Center">
+            <Button Text=" Add "
+                    Command="{Binding AddTvShowCommand}"
+                    BackgroundColor="#6200EA"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+            <Button Text="Delete"
+                    Command="{Binding DeleteTvShowCommand}"
+                    BackgroundColor="#E91E63"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

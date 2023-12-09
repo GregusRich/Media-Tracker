@@ -32,19 +32,19 @@ namespace Media_Tracker.ViewModel
             // Initializing the different types of TvShow Collections
             AllTvShows = new ObservableCollection<TvShow>()
             {
-                new TvShow { TvShowTitle = "Silicon Valley", TvShowSeason = "Season 1", EpisodeLength = 28, ReleaseDate = new DateTime(2014, 4, 6), IsCompleted = true, IsReleased = true },
-                new TvShow { TvShowTitle = "Silicon Valley", TvShowSeason = "Season 2", EpisodeLength = 28, ReleaseDate = new DateTime(2015, 4, 12), IsCompleted = true, IsReleased = true },
-                new TvShow { TvShowTitle = "Rick and Morty", TvShowSeason = "Season 1", EpisodeLength = 22, ReleaseDate = new DateTime(2013, 12, 2), IsCompleted = true, IsReleased = true },
-                new TvShow { TvShowTitle = "Breaking Bad", TvShowSeason = "Season 5", EpisodeLength = 47, ReleaseDate = new DateTime(2012, 7, 15), IsCompleted = true, IsReleased = true },
-                new TvShow { TvShowTitle = "Game of Thrones", TvShowSeason = "Season 8", EpisodeLength = 80, ReleaseDate = new DateTime(2019, 4, 14), IsCompleted = true, IsReleased = true },
-                new TvShow { TvShowTitle = "Stranger Things", TvShowSeason = "Season 4", EpisodeLength = 50, ReleaseDate = new DateTime(2022, 5, 27), IsCompleted = false, IsReleased = true },
-                new TvShow { TvShowTitle = "The Mandalorian", TvShowSeason = "Season 2", EpisodeLength = 40, ReleaseDate = new DateTime(2020, 10, 30), IsCompleted = true, IsReleased = true },
-                new TvShow { TvShowTitle = "The Witcher", TvShowSeason = "Season 2", EpisodeLength = 60, ReleaseDate = new DateTime(2021, 12, 17), IsCompleted = true, IsReleased = true },
-                new TvShow { TvShowTitle = "Westworld", TvShowSeason = "Season 3", EpisodeLength = 58, ReleaseDate = new DateTime(2020, 3, 15), IsCompleted = true, IsReleased = true },
-                new TvShow { TvShowTitle = "Better Call Saul", TvShowSeason = "Season 6", EpisodeLength = 45, ReleaseDate = new DateTime(2022, 4, 18), IsCompleted = false, IsReleased = true },
+                new TvShow { TvShowTitle = "Silicon Valley", TvShowSeason = "S01", ReleaseDate = new DateTime(2014, 4, 6), IsCompleted = true, IsReleased = true },
+                new TvShow { TvShowTitle = "Silicon Valley", TvShowSeason = "S02", ReleaseDate = new DateTime(2015, 4, 12), IsCompleted = true, IsReleased = true },
+                new TvShow { TvShowTitle = "Rick and Morty", TvShowSeason = "S01", ReleaseDate = new DateTime(2013, 12, 2), IsCompleted = true, IsReleased = true },
+                new TvShow { TvShowTitle = "Breaking Bad", TvShowSeason = "S05", ReleaseDate = new DateTime(2012, 7, 15), IsCompleted = true, IsReleased = true },
+                new TvShow { TvShowTitle = "Game of Thrones", TvShowSeason = "S08", ReleaseDate = new DateTime(2019, 4, 14), IsCompleted = true, IsReleased = true },
+                new TvShow { TvShowTitle = "Stranger Things", TvShowSeason = "S04", ReleaseDate = new DateTime(2022, 5, 27), IsCompleted = false, IsReleased = true },
+                new TvShow { TvShowTitle = "The Mandalorian", TvShowSeason = "S02", ReleaseDate = new DateTime(2020, 10, 30), IsCompleted = true, IsReleased = true },
+                new TvShow { TvShowTitle = "The Witcher", TvShowSeason = "S02", ReleaseDate = new DateTime(2021, 12, 17), IsCompleted = true, IsReleased = true },
+                new TvShow { TvShowTitle = "Westworld", TvShowSeason = "S03", ReleaseDate = new DateTime(2020, 3, 15), IsCompleted = true, IsReleased = true },
+                new TvShow { TvShowTitle = "Better Call Saul", TvShowSeason = "S06", ReleaseDate = new DateTime(2022, 4, 18), IsCompleted = false, IsReleased = true },
                 // Upcoming shows
-                new TvShow { TvShowTitle = "House of the Dragon", TvShowSeason = "Season 1", EpisodeLength = 60, ReleaseDate = new DateTime(2022, 8, 21), IsCompleted = false, IsReleased = false },
-                new TvShow { TvShowTitle = "The Last of Us", TvShowSeason = "Season 1", EpisodeLength = 60, ReleaseDate = new DateTime(2023, 1, 15), IsCompleted = false, IsReleased = false },
+                new TvShow { TvShowTitle = "House of the Dragon", TvShowSeason = "S02", ReleaseDate = new DateTime(2025, 8, 21), IsCompleted = false, IsReleased = false },
+                new TvShow { TvShowTitle = "The Last of Us", TvShowSeason = "S02", ReleaseDate = new DateTime(2024, 6, 15), IsCompleted = false, IsReleased = false },
             };
 
             AvailableTvShows = new ObservableCollection<TvShow>();

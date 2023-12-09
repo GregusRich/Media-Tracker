@@ -11,9 +11,6 @@ namespace Media_Tracker.Model
         private string tvShowSeason;
 
         [ObservableProperty]
-        private double episodeLength;
-
-        [ObservableProperty]
         private DateTime releaseDate;
 
         [ObservableProperty]

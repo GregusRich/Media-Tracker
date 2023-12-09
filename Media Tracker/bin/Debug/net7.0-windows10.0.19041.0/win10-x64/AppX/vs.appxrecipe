@@ -29,25 +29,25 @@
     <AppXManifest Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-08T05:55:19.358</Modified>
+      <Modified>2023-12-09T12:55:42.952</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-08T05:47:17.753</Modified>
+      <Modified>2023-12-09T12:55:42.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.runtimeconfig.json">
       <PackagePath>Media Tracker.runtimeconfig.json</PackagePath>
-      <Modified>2023-12-08T05:34:42.555</Modified>
+      <Modified>2023-12-09T12:55:42.497</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.dll">
       <PackagePath>Media Tracker.dll</PackagePath>
-      <Modified>2023-12-08T05:55:18.217</Modified>
+      <Modified>2023-12-09T12:55:41.461</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Media Tracker.exe</PackagePath>
-      <Modified>2023-12-08T05:55:18.250</Modified>
+      <Modified>2023-12-09T12:55:41.495</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\grego\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -927,7 +927,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.deps.json">
       <PackagePath>Media Tracker.deps.json</PackagePath>
-      <Modified>2023-12-08T05:55:19.173</Modified>
+      <Modified>2023-12-09T12:55:42.842</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -947,23 +947,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-12-06T07:54:01.109</Modified>
+      <Modified>2023-12-09T03:01:51.109</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-12-06T07:54:01.551</Modified>
+      <Modified>2023-12-09T03:01:51.226</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-12-06T07:54:01.600</Modified>
+      <Modified>2023-12-09T03:01:51.315</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-12-06T07:54:01.891</Modified>
+      <Modified>2023-12-09T03:01:51.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-12-06T07:54:02.065</Modified>
+      <Modified>2023-12-09T03:01:52.652</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -975,207 +975,207 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-12-06T07:54:02.928</Modified>
+      <Modified>2023-12-09T03:01:54.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.954</Modified>
+      <Modified>2023-12-09T03:02:00.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.964</Modified>
+      <Modified>2023-12-09T03:02:00.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.972</Modified>
+      <Modified>2023-12-09T03:02:00.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.983</Modified>
+      <Modified>2023-12-09T03:02:00.764</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-12-06T07:54:13.023</Modified>
+      <Modified>2023-12-09T03:02:00.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-12-06T07:54:10.518</Modified>
+      <Modified>2023-12-09T03:01:58.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-12-06T07:54:10.928</Modified>
+      <Modified>2023-12-09T03:01:59.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.418</Modified>
+      <Modified>2023-12-09T03:02:00.567</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-12-06T07:54:10.940</Modified>
+      <Modified>2023-12-09T03:02:00.289</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-12-06T07:54:11.666</Modified>
+      <Modified>2023-12-09T03:02:00.474</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-12-06T07:54:08.396</Modified>
+      <Modified>2023-12-09T03:01:58.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-12-06T07:54:09.169</Modified>
+      <Modified>2023-12-09T03:01:58.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-12-06T07:54:10.258</Modified>
+      <Modified>2023-12-09T03:01:58.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-12-06T07:54:09.828</Modified>
+      <Modified>2023-12-09T03:01:58.231</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-12-06T07:54:10.117</Modified>
+      <Modified>2023-12-09T03:01:58.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-12-06T07:54:03.024</Modified>
+      <Modified>2023-12-09T03:01:54.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-12-06T07:54:03.073</Modified>
+      <Modified>2023-12-09T03:01:54.650</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-12-06T07:54:03.855</Modified>
+      <Modified>2023-12-09T03:01:55.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-12-06T07:54:04.458</Modified>
+      <Modified>2023-12-09T03:01:56.223</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-12-06T07:54:05.067</Modified>
+      <Modified>2023-12-09T03:01:56.450</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-12-06T07:54:05.508</Modified>
+      <Modified>2023-12-09T03:01:56.474</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-12-06T07:54:05.902</Modified>
+      <Modified>2023-12-09T03:01:56.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-12-06T07:54:07.372</Modified>
+      <Modified>2023-12-09T03:01:57.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-12-06T07:54:06.045</Modified>
+      <Modified>2023-12-09T03:01:56.493</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-12-06T07:54:06.398</Modified>
+      <Modified>2023-12-09T03:01:56.869</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.861</Modified>
+      <Modified>2023-12-09T03:02:00.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.867</Modified>
+      <Modified>2023-12-09T03:02:00.649</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.875</Modified>
+      <Modified>2023-12-09T03:02:00.654</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.882</Modified>
+      <Modified>2023-12-09T03:02:00.661</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.896</Modified>
+      <Modified>2023-12-09T03:02:00.673</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.832</Modified>
+      <Modified>2023-12-09T03:02:00.613</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.837</Modified>
+      <Modified>2023-12-09T03:02:00.621</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.844</Modified>
+      <Modified>2023-12-09T03:02:00.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.851</Modified>
+      <Modified>2023-12-09T03:02:00.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.856</Modified>
+      <Modified>2023-12-09T03:02:00.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.771</Modified>
+      <Modified>2023-12-09T03:02:00.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.807</Modified>
+      <Modified>2023-12-09T03:02:00.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.812</Modified>
+      <Modified>2023-12-09T03:02:00.591</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.816</Modified>
+      <Modified>2023-12-09T03:02:00.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.821</Modified>
+      <Modified>2023-12-09T03:02:00.604</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.903</Modified>
+      <Modified>2023-12-09T03:02:00.679</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.908</Modified>
+      <Modified>2023-12-09T03:02:00.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.917</Modified>
+      <Modified>2023-12-09T03:02:00.695</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.926</Modified>
+      <Modified>2023-12-09T03:02:00.703</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-12-06T07:54:12.946</Modified>
+      <Modified>2023-12-09T03:02:00.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-12-06T07:54:03.003</Modified>
+      <Modified>2023-12-09T03:01:54.249</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-12-06T07:54:03.025</Modified>
+      <Modified>2023-12-09T03:01:54.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-12-06T07:54:03.412</Modified>
+      <Modified>2023-12-09T03:01:55.603</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-12-06T07:54:04.829</Modified>
+      <Modified>2023-12-09T03:01:56.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-12-06T07:54:05.421</Modified>
+      <Modified>2023-12-09T03:01:56.342</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

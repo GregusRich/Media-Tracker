@@ -5,21 +5,21 @@ namespace Media_Tracker.Model
     public partial class Book : ObservableObject
     {
         [ObservableProperty]
-        string bookTitle;
+        private string bookTitle;
 
         [ObservableProperty]
-        string author;
+        private string author;
 
         [ObservableProperty]
-        DateTime releaseDate;
+        private DateTime releaseDate;
 
         [ObservableProperty]
-        int rating;
+        private double pages;
 
         [ObservableProperty]
-        bool isCompleted;
+        private bool isCompleted;
 
-        // This property is computed each time it's called.
-        public bool IsReleased => DateTime.Today >= ReleaseDate;
+        [ObservableProperty]
+        private bool isReleased;
     }
 }
