@@ -12,8 +12,40 @@
                FontSize="30"
                FontAttributes="Bold"
                HorizontalOptions="Center"
-               Margin="0,10,0,10"
+               Margin="0,10,0,20"
                TextColor="#333333" />
+
+        <!-- Subheadings above the list -->
+        <Grid Padding="10"
+              Margin="10,0,10,0"
+              BackgroundColor="#E8E8E8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Title"
+                   Grid.Column="0"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+            <Label Text="Season"
+                   Grid.Column="1"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+            <Label Text="Release Date"
+                   Grid.Column="2"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+            <Label Text="Completed"
+                   Grid.Column="3"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+        </Grid>
 
         <!-- Scrollable list for TV Shows -->
         <CollectionView x:Name="TvShowsListView"
@@ -27,28 +59,28 @@
                     <Frame BackgroundColor="White" CornerRadius="10" Padding="10" Margin="5" HasShadow="True">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="2.5*" />
                                 <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2.5*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
                             <!-- Tv Show Title -->
                             <Label Text="{Binding TvShowTitle}"
                                    Grid.Column="0"
-                                   FontSize="16"
+                                   FontSize="Small"
                                    TextColor="#333333" />
 
                             <!-- Episode Length -->
                             <Label Text="{Binding TvShowSeason}"
                                    Grid.Column="1"
-                                   FontSize="16"
+                                   FontSize="Small"
                                    TextColor="#333333" />
 
                             <!-- Release Date -->
                             <Label Text="{Binding ReleaseDate, StringFormat='{0:dd MMM yyyy}'}"
                                    Grid.Column="2"
-                                   FontSize="16"
+                                   FontSize="Small"
                                    TextColor="#333333" />
 
                             <!-- Is Completed Checkbox -->
@@ -63,9 +95,9 @@
 
         <!-- Category selection -->
         <HorizontalStackLayout Margin="10"
-                               Spacing="20"
+                               Spacing="30"
                                HorizontalOptions="Center">
-            <Label Text="Select Category"
+            <Label Text="Select Category:"
                    VerticalOptions="Center"
                    TextColor="#333333" />
             <Picker x:Name="CategoryPicker"

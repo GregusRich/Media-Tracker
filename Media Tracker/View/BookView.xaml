@@ -2,11 +2,144 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Media_Tracker.View.BookView"
-             Title="BookView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Books"
+             BackgroundColor="#F5F5F5">
+
+    <VerticalStackLayout Spacing="20">
+
+        <!-- Header label for the page -->
+        <Label Text="Books"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,10,0,10"
+               TextColor="#333333" />
+
+        <!-- Subheadings above the list -->
+        <Grid Padding="10"
+              Margin="10,10,10,0"
+              BackgroundColor="#E8E8E8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2.5*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Title"
+                   Grid.Column="0"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+            <Label Text="Author"
+                   Grid.Column="1"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+            <Label Text="Release Date"
+                   Grid.Column="2"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+            <Label Text="Completed"
+                   Grid.Column="3"
+                   FontSize="Small"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+        </Grid>
+
+        <!-- Scrollable list for Books -->
+        <CollectionView x:Name="BooksListView"
+                        ItemsSource="{Binding DisplayedBooks}"
+                        HeightRequest="300"
+                        Margin="10"
+                        BackgroundColor="Transparent">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Custom layout for each item in the list -->
+                    <Frame BackgroundColor="White" CornerRadius="10" Padding="15" Margin="5" HasShadow="True">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition Width="2.5*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Book Title -->
+                            <Label Text="{Binding BookTitle}"
+                                   Grid.Column="0"
+                                   FontSize="Small"
+                                   TextColor="#333333" />
+
+                            <!-- Author -->
+                            <Label Text="{Binding Author}"
+                                   Grid.Column="1"
+                                   FontSize="Small"
+                                   TextColor="#333333" />
+
+                            <!-- Release Date -->
+                            <Label Text="{Binding ReleaseDate, StringFormat='{0:MMM yyyy}'}"
+                                   Grid.Column="2"
+                                   FontSize="Small"
+                                   TextColor="#333333" />
+
+                            <!-- Is Completed Checkbox -->
+                            <CheckBox IsChecked="{Binding IsCompleted}"
+                                      Grid.Column="4"
+                                      Color="#4CAF50" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Category selection -->
+        <HorizontalStackLayout Margin="10"
+                               Spacing="20"
+                               HorizontalOptions="Center">
+            <Label Text="Select Category:"
+                   VerticalOptions="Center"
+                   TextColor="#333333" />
+            <Picker x:Name="CategoryPicker"
+                    Title="Category"
+                    SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White"
+                    TextColor="#333333">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>All Books</x:String>
+                        <x:String>Upcoming Books</x:String>
+                        <x:String>Available Books</x:String>
+                        <x:String>Completed Books</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Go"
+                    Command="{Binding ShowBookListCommand}"
+                    HorizontalOptions="End"
+                    BackgroundColor="#6200EA"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+        </HorizontalStackLayout>
+
+        <!-- Action buttons -->
+        <HorizontalStackLayout Margin="20"
+                               Spacing="50"
+                               HorizontalOptions="Center">
+            <Button Text=" Add "
+                    Command="{Binding AddBookCommand}"
+                    BackgroundColor="#6200EA"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+            <Button Text="Delete"
+                    Command="{Binding DeleteBookCommand}"
+                    BackgroundColor="#E91E63"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

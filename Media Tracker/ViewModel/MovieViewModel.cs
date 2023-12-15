@@ -51,6 +51,12 @@ namespace Media_Tracker.ViewModel
         }
 
         [RelayCommand]
+        async Task AddMovieAsync()
+        {
+
+        }
+
+        [RelayCommand]
         void ShowMovieList()
         {
             switch (SelectedCategory)
