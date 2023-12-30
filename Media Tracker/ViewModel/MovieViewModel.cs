@@ -1,14 +1,17 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Media_Tracker.Model;
+using Media_Tracker.View;
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace Media_Tracker.ViewModel
 {
     public partial class MovieViewModel : ObservableObject
     {
+
         [ObservableProperty]
         ObservableCollection<Movie> allMovies;
 
@@ -25,10 +28,19 @@ namespace Media_Tracker.ViewModel
         ObservableCollection<Movie> displayedMovies;
 
         [ObservableProperty]
+        Movie newMovie = new Movie(); // For adding a new movie in the AddMovieView
+
+        [ObservableProperty]
         string selectedCategory = "All Movies"; // Set "All Movies" as the default selected category
+
+        public IAsyncRelayCommand NavigateToAddMovieAsyncCommand { get; }
+        public IAsyncRelayCommand AddMovieAsyncCommand { get; }
 
         public MovieViewModel()
         {
+            NavigateToAddMovieAsyncCommand = new AsyncRelayCommand(NavigateToAddMovieAsync);
+            AddMovieAsyncCommand = new AsyncRelayCommand(AddMovieAsync);
+
             // Initialising the different types of Movie Collections
             AllMovies = new ObservableCollection<Movie>()
             {
@@ -51,9 +63,30 @@ namespace Media_Tracker.ViewModel
         }
 
         [RelayCommand]
-        async Task AddMovieAsync()
+        private async Task NavigateBackAsync()
         {
+            await Shell.Current.GoToAsync("..");
+        }
 
+
+        // Only used in the AddMovieView to add a movie
+        [RelayCommand]
+        private async Task AddMovieAsync()
+        {
+            if (NewMovie != null) 
+
+            {
+                AllMovies.Add(NewMovie);
+                NewMovie = new Movie(); // Reset for next entry
+            }
+        }
+
+
+        [RelayCommand]
+        private async Task NavigateToAddMovieAsync()
+        {
+            Debug.WriteLine("Navigating to AddMovieView button clicked");
+            await Shell.Current.GoToAsync("//AddMovieView");
         }
 
         [RelayCommand]

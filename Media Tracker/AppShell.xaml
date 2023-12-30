@@ -29,4 +29,7 @@
         </Tab>
 
     </TabBar>
+
+    <ShellContent Route="AddMovieView" ContentTemplate="{DataTemplate views:AddMovieView}" />
+
 </Shell>

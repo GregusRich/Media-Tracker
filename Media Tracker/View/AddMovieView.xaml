@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Media_Tracker.ViewModel"
+             x:Class="Media_Tracker.View.AddMovieView"
+             x:DataType="viewmodel:MovieViewModel">
+    
+    
+
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <!-- Movie Title -->
+        <Entry x:Name="TitleEntry"
+               Placeholder="Title"
+               Text="{Binding NewMovie.MovieTitle, Mode=TwoWay}"/>
+
+        <!-- Movie Length -->
+        <Entry x:Name="LengthEntry"
+               Placeholder="Length (minutes)"
+               Keyboard="Numeric"
+               Text="{Binding NewMovie.MovieLength, Mode=TwoWay}"/>
+
+        <!-- Release Date -->
+        <DatePicker x:Name="ReleaseDatePicker"
+                    Date="{Binding NewMovie.ReleaseDate, Mode=TwoWay}"/>
+
+        <!-- Completed Checkbox and Label -->
+        <HorizontalStackLayout>
+            <Label Text="Has this movie been completed?"
+                   VerticalOptions="Center"/>
+            <CheckBox x:Name="IsCompletedCheckBox"
+                      IsChecked="{Binding NewMovie.IsCompleted, Mode=TwoWay}"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

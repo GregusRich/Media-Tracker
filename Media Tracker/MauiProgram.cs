@@ -1,6 +1,8 @@
 ﻿using Media_Tracker.View;
 using Media_Tracker.ViewModel;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Media_Tracker;
 
@@ -30,6 +32,7 @@ public static class MauiProgram
         builder.Services.AddSingleton(s => new BookView(s.GetRequiredService<BookViewModel>()));
         builder.Services.AddSingleton(s => new MovieView(s.GetRequiredService<MovieViewModel>()));
         builder.Services.AddSingleton(s => new TvShowView(s.GetRequiredService<TvShowViewModel>()));
+        builder.Services.AddSingleton(s => new AddMovieView(s.GetRequiredService<MovieViewModel>()));
 
 #if DEBUG
         builder.Logging.AddDebug();
