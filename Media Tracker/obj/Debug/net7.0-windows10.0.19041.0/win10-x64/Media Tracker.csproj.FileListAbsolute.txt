@@ -219,7 +219,7 @@ E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostfxr.dll
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostpolicy.dll
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore.dll
-E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.923.32018.dll
+E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.1423.51910.dll
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordbi.dll
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscorrc.dll
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\msquic.dll
@@ -301,6 +301,7 @@ E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.AssemblyInfoInputs.cache
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.AssemblyInfo.cs
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.csproj.CoreCompileInputs.cache
+E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.sourcelink.json
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.csproj.CopyComplete
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Media Tracker.dll

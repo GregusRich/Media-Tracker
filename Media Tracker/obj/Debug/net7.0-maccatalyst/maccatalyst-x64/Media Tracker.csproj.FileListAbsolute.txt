@@ -252,6 +252,7 @@ E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\Media Tracker.AssemblyInfoInputs.cache
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\Media Tracker.AssemblyInfo.cs
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\Media Tracker.csproj.CoreCompileInputs.cache
+E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\Media Tracker.sourcelink.json
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\XamlC.stamp
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\Media Tracker.csproj.CopyComplete
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\Media Tracker.dll

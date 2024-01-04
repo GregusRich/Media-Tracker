@@ -51,13 +51,15 @@
         <!-- Scrollable list for movies -->
         <CollectionView x:Name="MoviesListView"
                         ItemsSource="{Binding DisplayedMovies}"
+                        SelectedItem="{Binding SelectedMovie, Mode=TwoWay}"
+                        SelectionMode="Single"
                         HeightRequest="300"
                         Margin="10"
                         BackgroundColor="Transparent">
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate>  
                     <!-- Custom layout for each item in the list -->
-                    <Frame BackgroundColor="White" CornerRadius="10" Padding="10" Margin="5" HasShadow="True">
+                    <Border BackgroundColor="White" Padding="10" Margin="5">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2.5*" />
@@ -89,7 +91,7 @@
                                       Grid.Column="3"
                                       Color="#4CAF50" />
                         </Grid>
-                    </Frame>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
@@ -130,7 +132,7 @@
                                Spacing="50"
                                HorizontalOptions="Center">
             <Button Text=" Add "
-                    Command="{Binding NavigateToAddMovieAsyncCommand}"
+                    Command="{Binding NavigateToAddMovieViewAsyncCommand}"
                     BackgroundColor="#6200EA"
                     TextColor="White"
                     CornerRadius="10"

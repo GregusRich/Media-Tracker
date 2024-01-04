@@ -31,5 +31,26 @@
                       IsChecked="{Binding NewMovie.IsCompleted, Mode=TwoWay}"/>
         </HorizontalStackLayout>
 
+        <!-- Save and Back Buttons -->
+        <HorizontalStackLayout Spacing="50" Margin="0,20,0,0"  HorizontalOptions="Center">
+
+            <!-- Back Button -->
+            <Button Text="Back"
+                    Command="{Binding NavigateBackAsyncCommand, Mode=TwoWay}"
+                    BackgroundColor="#E91E63"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+            
+            <!-- Save (Add) Button -->
+            <Button Text="Save"
+                    Command="{Binding AddMovieCommand, Mode=TwoWay}"
+                    BackgroundColor="#6200EA"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+
+        </HorizontalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

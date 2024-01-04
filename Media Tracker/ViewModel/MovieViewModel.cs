@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.Maui.Controls;
 using Media_Tracker.Model;
 using Media_Tracker.View;
 using System;
@@ -11,6 +12,10 @@ namespace Media_Tracker.ViewModel
 {
     public partial class MovieViewModel : ObservableObject
     {
+        public IAsyncRelayCommand NavigateBackAsyncCommand { get; }
+        public IAsyncRelayCommand NavigateToAddMovieViewAsyncCommand { get; }
+
+        public event EventHandler<string> MovieAdded; // Used for an OK popup when a movie is added
 
         [ObservableProperty]
         ObservableCollection<Movie> allMovies;
@@ -28,18 +33,23 @@ namespace Media_Tracker.ViewModel
         ObservableCollection<Movie> displayedMovies;
 
         [ObservableProperty]
-        Movie newMovie = new Movie(); // For adding a new movie in the AddMovieView
+        private Movie selectedMovie;
 
         [ObservableProperty]
         string selectedCategory = "All Movies"; // Set "All Movies" as the default selected category
 
-        public IAsyncRelayCommand NavigateToAddMovieAsyncCommand { get; }
-        public IAsyncRelayCommand AddMovieAsyncCommand { get; }
+        [ObservableProperty]
+        Movie newMovie = new Movie(); // For adding a new movie in the AddMovieView
+
+
+
 
         public MovieViewModel()
         {
-            NavigateToAddMovieAsyncCommand = new AsyncRelayCommand(NavigateToAddMovieAsync);
-            AddMovieAsyncCommand = new AsyncRelayCommand(AddMovieAsync);
+            NavigateBackAsyncCommand = new AsyncRelayCommand(NavigateBackAsync);
+            NavigateToAddMovieViewAsyncCommand = new AsyncRelayCommand(NavigateToAddMovieViewAsync);
+
+            NewMovie = new Movie { ReleaseDate = DateTime.Today }; // Setting default date
 
             // Initialising the different types of Movie Collections
             AllMovies = new ObservableCollection<Movie>()
@@ -62,32 +72,61 @@ namespace Media_Tracker.ViewModel
             DisplayedMovies = AllMovies; // Start by showing all movies
         }
 
+
         [RelayCommand]
         private async Task NavigateBackAsync()
         {
-            await Shell.Current.GoToAsync("..");
+            try
+            {
+                Debug.WriteLine("Back button clicked \n");
+                await Shell.Current.GoToAsync("//MovieView");
+                ShowMovieList();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Navigation Error: {ex.Message}");
+            }
         }
+
 
 
         // Only used in the AddMovieView to add a movie
         [RelayCommand]
-        private async Task AddMovieAsync()
+        private void AddMovie()
         {
             if (NewMovie != null) 
 
             {
                 AllMovies.Add(NewMovie);
-                NewMovie = new Movie(); // Reset for next entry
+                MovieAdded?.Invoke(this, NewMovie.MovieTitle); // Raise the event
+                Debug.WriteLine($"Movie {NewMovie.MovieTitle} has been added to the 'All Movies Collection'. \n");
+                NewMovie = new Movie() { ReleaseDate = DateTime.Today }; // Reset for next entry
+            }
+
+            else
+            {
+                Debug.WriteLine("Unable to add movie, movie cannot be 'null' \n");
             }
         }
 
-
         [RelayCommand]
-        private async Task NavigateToAddMovieAsync()
+        private void DeleteMovie()
         {
-            Debug.WriteLine("Navigating to AddMovieView button clicked");
+            if (SelectedMovie != null)
+            {
+                AllMovies.Remove(SelectedMovie);
+                SelectedMovie = null; // Reset the selection
+            }
+        }
+
+        // Navigate to the Add Movie Page
+        [RelayCommand]
+        private async Task NavigateToAddMovieViewAsync()
+        {
+            Debug.WriteLine("Navigating to AddMovieView button clicked \n");
             await Shell.Current.GoToAsync("//AddMovieView");
         }
+
 
         [RelayCommand]
         void ShowMovieList()
@@ -111,6 +150,7 @@ namespace Media_Tracker.ViewModel
                     break;
             }
         }
+
 
         private void FilterAvailableMovies()
         {

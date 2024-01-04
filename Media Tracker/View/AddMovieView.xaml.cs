@@ -11,6 +11,12 @@ namespace Media_Tracker.View
         {
             InitializeComponent();
             BindingContext = viewModel;
+            viewModel.MovieAdded += OnMovieAdded;
+        }
+
+        private async void OnMovieAdded(object sender, string movieTitle)
+        {
+            await DisplayAlert("Movie Added", $"Movie \"{movieTitle}\" has been added", "OK");
         }
     }
 }

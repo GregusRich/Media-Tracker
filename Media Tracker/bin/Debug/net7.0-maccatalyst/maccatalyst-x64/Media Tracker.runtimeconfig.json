@@ -4,23 +4,23 @@
     "includedFrameworks": [
       {
         "name": "Microsoft.NETCore.App",
-        "version": "7.0.9"
+        "version": "7.0.14"
       },
       {
         "name": "Microsoft.MacCatalyst",
-        "version": "16.4.7067"
+        "version": "16.4.7125"
       },
       {
         "name": "Microsoft.Maui.Core",
-        "version": "**FromWorkload**"
+        "version": "7.0.101"
       },
       {
         "name": "Microsoft.Maui.Controls",
-        "version": "**FromWorkload**"
+        "version": "7.0.101"
       },
       {
         "name": "Microsoft.Maui.Essentials",
-        "version": "**FromWorkload**"
+        "version": "7.0.101"
       }
     ],
     "configProperties": {
@@ -38,8 +38,8 @@
       "System.Runtime.InteropServices.BuiltInComInterop.IsSupported": false,
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,
       "System.StartupHookProvider.IsSupported": false,
-      "System.Threading.Thread.EnableAutoreleasePool": true,
-      "System.Text.Encoding.EnableUnsafeUTF7Encoding": false
+      "System.Text.Encoding.EnableUnsafeUTF7Encoding": false,
+      "System.Threading.Thread.EnableAutoreleasePool": true
     }
   }
 }

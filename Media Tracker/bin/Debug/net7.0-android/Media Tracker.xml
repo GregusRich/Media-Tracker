@@ -95,6 +95,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:Media_Tracker.ViewModel.MovieViewModel.AllMovies">
             <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.allMovies"/>
@@ -111,11 +112,14 @@
         <member name="P:Media_Tracker.ViewModel.MovieViewModel.DisplayedMovies">
             <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.displayedMovies"/>
         </member>
-        <member name="P:Media_Tracker.ViewModel.MovieViewModel.NewMovie">
-            <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.newMovie"/>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.SelectedMovie">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.selectedMovie"/>
         </member>
         <member name="P:Media_Tracker.ViewModel.MovieViewModel.SelectedCategory">
             <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.selectedCategory"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.NewMovie">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.MovieViewModel.newMovie"/>
         </member>
         <member name="F:Media_Tracker.ViewModel.MovieViewModel.navigateBackCommand">
             <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.NavigateBackCommand"/>.</summary>
@@ -127,13 +131,19 @@
             <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.AddMovieCommand"/>.</summary>
         </member>
         <member name="P:Media_Tracker.ViewModel.MovieViewModel.AddMovieCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.AddMovieAsync"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.AddMovie"/>.</summary>
         </member>
-        <member name="F:Media_Tracker.ViewModel.MovieViewModel.navigateToAddMovieCommand">
-            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.NavigateToAddMovieCommand"/>.</summary>
+        <member name="F:Media_Tracker.ViewModel.MovieViewModel.deleteMovieCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.DeleteMovieCommand"/>.</summary>
         </member>
-        <member name="P:Media_Tracker.ViewModel.MovieViewModel.NavigateToAddMovieCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.NavigateToAddMovieAsync"/>.</summary>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.DeleteMovieCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.DeleteMovie"/>.</summary>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.MovieViewModel.navigateToAddMovieViewCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.NavigateToAddMovieViewCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.MovieViewModel.NavigateToAddMovieViewCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.NavigateToAddMovieViewAsync"/>.</summary>
         </member>
         <member name="F:Media_Tracker.ViewModel.MovieViewModel.showMovieListCommand">
             <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.ShowMovieListCommand"/>.</summary>
@@ -238,6 +248,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayedMovies">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayedMovies" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedMovie">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedMovie" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewMovie">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewMovie" generated properties.</summary>
         </member>
@@ -324,6 +337,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayedMovies">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayedMovies" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedMovie">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedMovie" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewMovie">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewMovie" generated properties.</summary>

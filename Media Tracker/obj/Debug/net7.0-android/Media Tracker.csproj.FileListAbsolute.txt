@@ -107,6 +107,7 @@ E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-android\Media Tracker.AssemblyInfoInputs.cache
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-android\Media Tracker.AssemblyInfo.cs
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-android\Media Tracker.csproj.CoreCompileInputs.cache
+E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-android\Media Tracker.sourcelink.json
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-android\XamlC.stamp
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-android\Media Tracker.dll
 E:\Diploma Advanced Programming\Advanced Mobile Apps\Media Tracker\Media Tracker\obj\Debug\net7.0-android\Media Tracker.pdb
