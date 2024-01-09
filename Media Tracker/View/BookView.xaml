@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Media_Tracker.ViewModel"
              x:Class="Media_Tracker.View.BookView"
              Title="Books"
              BackgroundColor="#F5F5F5">
@@ -50,13 +51,15 @@
         <!-- Scrollable list for Books -->
         <CollectionView x:Name="BooksListView"
                         ItemsSource="{Binding DisplayedBooks}"
+                        SelectedItem="{Binding SelectedBook, Mode=TwoWay}"
+                        SelectionMode="Single"
                         HeightRequest="300"
                         Margin="10"
                         BackgroundColor="Transparent">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <!-- Custom layout for each item in the list -->
-                    <Frame BackgroundColor="White" CornerRadius="10" Padding="15" Margin="5" HasShadow="True">
+                    <Border BackgroundColor="White" Padding="10" Margin="5">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="3*" />
@@ -88,7 +91,7 @@
                                       Grid.Column="4"
                                       Color="#4CAF50" />
                         </Grid>
-                    </Frame>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
@@ -129,7 +132,7 @@
                                Spacing="50"
                                HorizontalOptions="Center">
             <Button Text=" Add "
-                    Command="{Binding AddBookCommand}"
+                    Command="{Binding NavigateToAddBookViewAsyncCommand}"
                     BackgroundColor="#6200EA"
                     TextColor="White"
                     CornerRadius="10"

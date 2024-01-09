@@ -51,6 +51,8 @@
         <!-- Scrollable list for TV Shows -->
         <CollectionView x:Name="TvShowsListView"
                         ItemsSource="{Binding DisplayedTvShows}"
+                        SelectedItem="{Binding SelectedTvShow, Mode=TwoWay}"
+                        SelectionMode="Single"
                         HeightRequest="300"
                         Margin="10"
                         BackgroundColor="Transparent">

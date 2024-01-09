@@ -1,14 +1,21 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Media_Tracker.Model;
+using Media_Tracker.View;
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace Media_Tracker.ViewModel
 {
     public partial class BookViewModel : ObservableObject
     {
+        public IAsyncRelayCommand NavigateBackAsyncCommand { get; }
+        public IAsyncRelayCommand NavigateToAddBookViewAsyncCommand { get; }
+
+        public event EventHandler<string> BookAdded; // Used for an OK popup when a movie is added
+
         [ObservableProperty]
         ObservableCollection<Book> allBooks;
 
@@ -25,10 +32,21 @@ namespace Media_Tracker.ViewModel
         ObservableCollection<Book> displayedBooks;
 
         [ObservableProperty]
+        private Book selectedBook;
+
+        [ObservableProperty]
         string selectedCategory = "All Books"; // Set "All Books" as the default selected category
+
+        [ObservableProperty]
+        Book newBook = new Book(); // For adding a new book in the AddBookView
 
         public BookViewModel()
         {
+            NavigateBackAsyncCommand = new AsyncRelayCommand(NavigateBackAsync);
+            NavigateToAddBookViewAsyncCommand = new AsyncRelayCommand(NavigateToAddBookViewAsync);
+
+            NewBook = new Book { ReleaseDate = DateTime.Today }; // Setting default date as today
+
             // Initializing the different types of Book Collections
             AllBooks = new ObservableCollection<Book>()
             {
@@ -49,6 +67,61 @@ namespace Media_Tracker.ViewModel
             CompletedBooks = new ObservableCollection<Book>();
             DisplayedBooks = AllBooks; // Start by showing all Books, which is set to "All books" in BookViewModel init
         }
+
+
+        [RelayCommand]
+        private async Task NavigateBackAsync()
+        {
+            try
+            {
+                Debug.WriteLine("Back button clicked \n");
+                await Shell.Current.GoToAsync("//BookView");
+                ShowBookList();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Navigation Error: {ex.Message}");
+            }
+        }
+
+
+        // Only used in the AddMovieView to add a movie
+        [RelayCommand]
+        private void AddBook()
+        {
+            if (NewBook != null)
+
+            {
+                AllBooks.Add(NewBook);
+                BookAdded?.Invoke(this, NewBook.BookTitle); // Raise the event
+                Debug.WriteLine($"Movie {NewBook.BookTitle} has been added to the 'All Movies Collection'. \n");
+                NewBook = new Book() { ReleaseDate = DateTime.Today }; // Reset for next entry
+            }
+
+            else
+            {
+                Debug.WriteLine("Unable to add book, book cannot be 'null' \n");
+            }
+        }
+
+        [RelayCommand]
+        private void DeleteBook()
+        {
+            if (SelectedBook!= null)
+            {
+                AllBooks.Remove(SelectedBook);
+                SelectedBook = null; // Reset the selection
+            }
+        }
+
+        // Navigate to the Add Movie Page
+        [RelayCommand]
+        private async Task NavigateToAddBookViewAsync()
+        {
+            Debug.WriteLine("Navigating to AddBookView button clicked \n");
+            await Shell.Current.GoToAsync("//AddBookView");
+        }
+
 
         [RelayCommand]
         void ShowBookList()

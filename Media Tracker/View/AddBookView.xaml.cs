@@ -8,7 +8,7 @@ public partial class AddBookView : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = viewModel;
-        // Use after Bookadded variable added.        viewModel.BookAdded += OnBookAdded;
+        viewModel.BookAdded += OnBookAdded;
     }
 
     private async void OnBookAdded(object sender, string bookTitle)

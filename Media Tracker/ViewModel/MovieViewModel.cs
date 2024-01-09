@@ -42,8 +42,6 @@ namespace Media_Tracker.ViewModel
         Movie newMovie = new Movie(); // For adding a new movie in the AddMovieView
 
 
-
-
         public MovieViewModel()
         {
             NavigateBackAsyncCommand = new AsyncRelayCommand(NavigateBackAsync);

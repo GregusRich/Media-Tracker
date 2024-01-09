@@ -64,6 +64,10 @@
         <member name="T:Media_Tracker.ViewModel.BookViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:Media_Tracker.ViewModel.BookViewModel.AllBooks">
             <inheritdoc cref="F:Media_Tracker.ViewModel.BookViewModel.allBooks"/>
@@ -80,8 +84,38 @@
         <member name="P:Media_Tracker.ViewModel.BookViewModel.DisplayedBooks">
             <inheritdoc cref="F:Media_Tracker.ViewModel.BookViewModel.displayedBooks"/>
         </member>
+        <member name="P:Media_Tracker.ViewModel.BookViewModel.SelectedBook">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.BookViewModel.selectedBook"/>
+        </member>
         <member name="P:Media_Tracker.ViewModel.BookViewModel.SelectedCategory">
             <inheritdoc cref="F:Media_Tracker.ViewModel.BookViewModel.selectedCategory"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.BookViewModel.NewBook">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.BookViewModel.newBook"/>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.BookViewModel.navigateBackCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.BookViewModel.NavigateBackCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.BookViewModel.NavigateBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.BookViewModel.NavigateBackAsync"/>.</summary>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.BookViewModel.addBookCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.BookViewModel.AddBookCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.BookViewModel.AddBookCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.BookViewModel.AddBook"/>.</summary>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.BookViewModel.deleteBookCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.BookViewModel.DeleteBookCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.BookViewModel.DeleteBookCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.BookViewModel.DeleteBook"/>.</summary>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.BookViewModel.navigateToAddBookViewCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.BookViewModel.NavigateToAddBookViewCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.BookViewModel.NavigateToAddBookViewCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.BookViewModel.NavigateToAddBookViewAsync"/>.</summary>
         </member>
         <member name="F:Media_Tracker.ViewModel.BookViewModel.showBookListCommand">
             <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.BookViewModel.ShowBookListCommand"/>.</summary>
@@ -264,8 +298,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayedBooks">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayedBooks" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedBook">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedBook" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCategory">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewBook">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewBook" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AllMovies">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AllMovies" generated properties.</summary>
@@ -360,8 +400,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayedBooks">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayedBooks" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedBook">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedBook" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCategory">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewBook">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewBook" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AllMovies">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AllMovies" generated properties.</summary>

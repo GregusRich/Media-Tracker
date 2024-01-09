@@ -1,12 +1,60 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Media_Tracker.ViewModel"
              x:Class="Media_Tracker.View.AddBookView"
-             Title="AddBookView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             x:DataType="viewmodel:BookViewModel"
+             Title="Add Book">
+
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <!-- Book Title -->
+        <Entry x:Name="TitleEntry"
+               Placeholder="Title"
+               Text="{Binding NewBook.BookTitle, Mode=TwoWay}"/>
+
+        <!-- Author -->
+        <Entry x:Name="AuthorEntry"
+               Placeholder="Author"
+               Text="{Binding NewBook.Author, Mode=TwoWay}"/>
+
+        <!-- Page Count -->
+        <Entry x:Name="PageCountEntry"
+               Placeholder="Page Count"
+               Keyboard="Numeric"
+               Text="{Binding NewBook.Pages, Mode=TwoWay}"/>
+
+        <!-- Release Date -->
+        <DatePicker x:Name="ReleaseDatePicker"
+                    Date="{Binding NewBook.ReleaseDate, Mode=TwoWay}"/>
+
+        <!-- Completed Checkbox and Label -->
+        <HorizontalStackLayout>
+            <Label Text="Has this book been completed?"
+                   VerticalOptions="Center"/>
+            <CheckBox x:Name="IsCompletedCheckBox"
+                      IsChecked="{Binding NewBook.IsCompleted, Mode=TwoWay}"/>
+        </HorizontalStackLayout>
+
+        <!-- Save and Back Buttons -->
+        <HorizontalStackLayout Spacing="50" Margin="0,20,0,0"  HorizontalOptions="Center">
+
+            <!-- Back Button -->
+            <Button Text="Back"
+                    Command="{Binding NavigateBackAsyncCommand, Mode=TwoWay}"
+                    BackgroundColor="#E91E63"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+
+            <!-- Save (Add) Button -->
+            <Button Text="Save"
+                    Command="{Binding AddBookCommand, Mode=TwoWay}"
+                    BackgroundColor="#6200EA"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+
+        </HorizontalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>
