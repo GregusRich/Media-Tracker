@@ -36,11 +36,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = Media_Tracker.Resources.St
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[E:/Diploma Advanced Programming/Advanced Mobile Apps/Media Tracker/Media Tracker/View/AddBookView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Media_Tracker.View.AddBookView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AddBookView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AddBookView.xaml
+
 [E:/Diploma Advanced Programming/Advanced Mobile Apps/Media Tracker/Media Tracker/View/AddMovieView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Media_Tracker.View.AddMovieView.xaml
 build_metadata.AdditionalFiles.TargetPath = View\AddMovieView.xaml
 build_metadata.AdditionalFiles.RelativePath = View\AddMovieView.xaml
+
+[E:/Diploma Advanced Programming/Advanced Mobile Apps/Media Tracker/Media Tracker/View/AddTvShowView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Media_Tracker.View.AddTvShowView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AddTvShowView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AddTvShowView.xaml
 
 [E:/Diploma Advanced Programming/Advanced Mobile Apps/Media Tracker/Media Tracker/View/BookView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

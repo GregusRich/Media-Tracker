@@ -31,5 +31,7 @@
     </TabBar>
 
     <ShellContent Route="AddMovieView" ContentTemplate="{DataTemplate views:AddMovieView}" />
+    <ShellContent Route="AddTvShowView" ContentTemplate="{DataTemplate views:AddTvShowView}" />
+    <ShellContent Route="AddBookView" ContentTemplate="{DataTemplate views:AddBookView}" />
 
 </Shell>

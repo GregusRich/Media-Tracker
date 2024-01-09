@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Media_Tracker.ViewModel"
              x:Class="Media_Tracker.View.TvShowView"
              Title="TV Shows"
              BackgroundColor="#F5F5F5">
@@ -56,7 +57,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <!-- Custom layout for each item in the list -->
-                    <Frame BackgroundColor="White" CornerRadius="10" Padding="10" Margin="5" HasShadow="True">
+                    <Border BackgroundColor="White" Padding="10" Margin="5">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2.5*" />
@@ -88,7 +89,7 @@
                                       Grid.Column="3"
                                       Color="#4CAF50" />
                         </Grid>
-                    </Frame>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
@@ -129,7 +130,7 @@
                                Spacing="50"
                                HorizontalOptions="Center">
             <Button Text=" Add "
-                    Command="{Binding AddTvShowCommand}"
+                    Command="{Binding NavigateToAddTvShowViewAsyncCommand}"
                     BackgroundColor="#6200EA"
                     TextColor="White"
                     CornerRadius="10"

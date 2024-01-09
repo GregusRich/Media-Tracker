@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Media_Tracker.ViewModel"
+             x:Class="Media_Tracker.View.AddTvShowView"
+             x:DataType="viewmodel:TvShowViewModel"
+             Title="Add TV Show">
+
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <!-- TV Show Title -->
+        <Entry x:Name="TitleEntry"
+               Placeholder="Title"
+               Text="{Binding NewTvShow.TvShowTitle, Mode=TwoWay}"/>
+
+        <!-- TV Show Season -->
+        <Entry x:Name="SeasonEntry"
+               Placeholder="Season (e.g., S01)"
+               Text="{Binding NewTvShow.TvShowSeason, Mode=TwoWay}"/>
+
+        <!-- Release Date -->
+        <DatePicker x:Name="ReleaseDatePicker"
+                    Date="{Binding NewTvShow.ReleaseDate, Mode=TwoWay}"/>
+
+        <!-- Completed Checkbox and Label -->
+        <HorizontalStackLayout>
+            <Label Text="Has this TV Show been completed?"
+                   VerticalOptions="Center"/>
+            <CheckBox x:Name="IsCompletedCheckBox"
+                      IsChecked="{Binding NewTvShow.IsCompleted, Mode=TwoWay}"/>
+        </HorizontalStackLayout>
+
+        <!-- Save and Back Buttons -->
+        <HorizontalStackLayout Spacing="50" Margin="0,20,0,0" HorizontalOptions="Center">
+            
+            <!-- Back Button -->
+            <Button Text="Back"
+                    Command="{Binding NavigateBackAsyncCommand}"
+                    BackgroundColor="#E91E63"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+
+            <!-- Save (Add) Button -->
+            <Button Text="Save"
+                    Command="{Binding AddTvShowCommand}"
+                    BackgroundColor="#6200EA"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="20,0" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

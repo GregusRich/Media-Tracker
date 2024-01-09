@@ -154,6 +154,10 @@
         <member name="T:Media_Tracker.ViewModel.TvShowViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:Media_Tracker.ViewModel.TvShowViewModel.AllTvShows">
             <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.allTvShows"/>
@@ -170,8 +174,38 @@
         <member name="P:Media_Tracker.ViewModel.TvShowViewModel.DisplayedTvShows">
             <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.displayedTvShows"/>
         </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.SelectedTvShow">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.selectedTvShow"/>
+        </member>
         <member name="P:Media_Tracker.ViewModel.TvShowViewModel.SelectedCategory">
             <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.selectedCategory"/>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.NewTvShow">
+            <inheritdoc cref="F:Media_Tracker.ViewModel.TvShowViewModel.newTvShow"/>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.TvShowViewModel.navigateBackCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.TvShowViewModel.NavigateBackCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.NavigateBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.TvShowViewModel.NavigateBackAsync"/>.</summary>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.TvShowViewModel.addTvShowCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.TvShowViewModel.AddTvShowCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.AddTvShowCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.TvShowViewModel.AddTvShow"/>.</summary>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.TvShowViewModel.deleteTvShowCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.TvShowViewModel.DeleteTvShowCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.DeleteTvShowCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.TvShowViewModel.DeleteTvShow"/>.</summary>
+        </member>
+        <member name="F:Media_Tracker.ViewModel.TvShowViewModel.navigateToAddTvShowViewCommand">
+            <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.TvShowViewModel.NavigateToAddTvShowViewCommand"/>.</summary>
+        </member>
+        <member name="P:Media_Tracker.ViewModel.TvShowViewModel.NavigateToAddTvShowViewCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.TvShowViewModel.NavigateToAddTvShowViewAsync"/>.</summary>
         </member>
         <member name="F:Media_Tracker.ViewModel.TvShowViewModel.showTvShowListCommand">
             <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.TvShowViewModel.ShowTvShowListCommand"/>.</summary>
@@ -269,6 +303,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayedTvShows">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayedTvShows" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedTvShow">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedTvShow" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewTvShow">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewTvShow" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -358,6 +398,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayedTvShows">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayedTvShows" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedTvShow">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedTvShow" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewTvShow">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewTvShow" generated properties.</summary>
         </member>
     </members>
 </doc>

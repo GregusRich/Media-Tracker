@@ -3,12 +3,18 @@ using CommunityToolkit.Mvvm.Input;
 using Media_Tracker.Model;
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace Media_Tracker.ViewModel
 {
     public partial class TvShowViewModel : ObservableObject
     {
+        public IAsyncRelayCommand NavigateBackAsyncCommand { get; }
+        public IAsyncRelayCommand NavigateToAddTvShowViewAsyncCommand { get; }
+
+        public event EventHandler<string> TvShowAdded; // Used for an OK popup when a TvShow is added
+
         [ObservableProperty]
         ObservableCollection<TvShow> allTvShows;
 
@@ -25,10 +31,22 @@ namespace Media_Tracker.ViewModel
         ObservableCollection<TvShow> displayedTvShows;
 
         [ObservableProperty]
+        private TvShow selectedTvShow;
+
+        [ObservableProperty]
         string selectedCategory = "All TvShows"; // Set "All TvShows" as the default selected category
+
+        [ObservableProperty]
+        TvShow newTvShow = new TvShow(); // For adding a new TvShow in the AddTvShowView
+
 
         public TvShowViewModel()
         {
+            NavigateBackAsyncCommand = new AsyncRelayCommand(NavigateBackAsync);
+            NavigateToAddTvShowViewAsyncCommand = new AsyncRelayCommand(NavigateToAddTvShowViewAsync);
+
+            NewTvShow = new TvShow { ReleaseDate = DateTime.Today }; // Setting default date for new TvShow
+
             // Initializing the different types of TvShow Collections
             AllTvShows = new ObservableCollection<TvShow>()
             {
@@ -53,6 +71,56 @@ namespace Media_Tracker.ViewModel
             DisplayedTvShows = AllTvShows; // Start by showing all TvShows
         }
 
+        [RelayCommand]
+        private async Task NavigateBackAsync()
+        {
+            try
+            {
+                Debug.WriteLine("Back button clicked \n");
+                await Shell.Current.GoToAsync("//TvShowView");
+                ShowTvShowList();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Navigation Error: {ex.Message}");
+            }
+        }
+
+
+
+        [RelayCommand]
+        private void AddTvShow()
+        {
+            if (NewTvShow != null)
+            {
+                AllTvShows.Add(NewTvShow);
+                TvShowAdded?.Invoke(this, NewTvShow.TvShowTitle); // Raise the event
+                Debug.WriteLine($"TvShow {NewTvShow.TvShowTitle} has been added to the 'All TvShows Collection'. \n");
+                NewTvShow = new TvShow() { ReleaseDate = DateTime.Today }; // Reset for next entry
+            }
+            else
+            {
+                Debug.WriteLine("Unable to add TvShow, TvShow cannot be 'null' \n");
+            }
+        }
+
+        [RelayCommand]
+        private void DeleteTvShow()
+        {
+            if (SelectedTvShow != null)
+            {
+                AllTvShows.Remove(SelectedTvShow);
+                SelectedTvShow = null; // Reset the selection
+            }
+        }
+
+
+        [RelayCommand]
+        private async Task NavigateToAddTvShowViewAsync()
+        {
+            Debug.WriteLine("Navigating to AddTvShowView button clicked \n");
+            await Shell.Current.GoToAsync("//AddTvShowView");
+        }
 
         [RelayCommand]
         void ShowTvShowList()

@@ -33,6 +33,8 @@ public static class MauiProgram
         builder.Services.AddSingleton(s => new MovieView(s.GetRequiredService<MovieViewModel>()));
         builder.Services.AddSingleton(s => new TvShowView(s.GetRequiredService<TvShowViewModel>()));
         builder.Services.AddSingleton(s => new AddMovieView(s.GetRequiredService<MovieViewModel>()));
+        builder.Services.AddSingleton(s => new AddTvShowView(s.GetRequiredService<TvShowViewModel>()));
+        builder.Services.AddSingleton(s => new AddBookView(s.GetRequiredService<BookViewModel>()));
 
 #if DEBUG
         builder.Logging.AddDebug();

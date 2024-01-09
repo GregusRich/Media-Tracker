@@ -104,6 +104,8 @@
                    VerticalOptions="Center"
                    TextColor="#333333" />
             <Picker x:Name="CategoryPicker"
+                    
+                    
                     Title="Category"
                     SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
                     HorizontalOptions="FillAndExpand"
