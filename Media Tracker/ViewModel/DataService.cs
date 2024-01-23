@@ -1,8 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Media_Tracker.Model;
 using SQLite;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Media_Tracker.ViewModel
 {
@@ -27,6 +25,7 @@ namespace Media_Tracker.ViewModel
             }
         }
 
+        // Movies: CRUD operations
         public async Task<List<Movie>> GetMoviesAsync()
         {
             await InitDatabaseAsync();
@@ -43,6 +42,44 @@ namespace Media_Tracker.ViewModel
         {
             await InitDatabaseAsync();
             return await db.DeleteAsync(movie);
-        } 
+        }
+
+        // TvShows: CRUD operations
+        public async Task<List<TvShow>> GetTvShowsAsync()
+        {
+            await InitDatabaseAsync();
+            return await db.Table<TvShow>().ToListAsync();
+        }
+
+        public async Task<int> AddTvShowAsync(TvShow tvShow)
+        {
+            await InitDatabaseAsync();
+            return await db.InsertAsync(tvShow);
+        }
+
+        public async Task<int> DeleteTvShowAsync(TvShow tvShow)
+        {
+            await InitDatabaseAsync();
+            return await db.DeleteAsync(tvShow);
+        }
+
+        // Books: CRUD operations
+        public async Task<List<Book>> GetBooksAsync()
+        {
+            await InitDatabaseAsync();
+            return await db.Table<Book>().ToListAsync();
+        }
+
+        public async Task<int> AddBookAsync(Book book)
+        {
+            await InitDatabaseAsync();
+            return await db.InsertAsync(book);
+        }
+
+        public async Task<int> DeleteBookAsync(Book book)
+        {
+            await InitDatabaseAsync();
+            return await db.DeleteAsync(book);
+        }
     }
 }

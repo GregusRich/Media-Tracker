@@ -1,16 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Media_Tracker.Model;
-using Media_Tracker.View;
-using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Windows.Input;
 
 namespace Media_Tracker.ViewModel
 {
     public partial class BookViewModel : ObservableObject
     {
+
         public IAsyncRelayCommand NavigateBackAsyncCommand { get; }
         public IAsyncRelayCommand NavigateToAddBookViewAsyncCommand { get; }
 
@@ -40,8 +38,13 @@ namespace Media_Tracker.ViewModel
         [ObservableProperty]
         Book newBook = new Book(); // For adding a new book in the AddBookView
 
-        public BookViewModel()
+        private readonly DataService dataService;
+
+        private bool _isDataLoaded = false;
+
+        public BookViewModel(DataService dataService)
         {
+            this.dataService = dataService;
             NavigateBackAsyncCommand = new AsyncRelayCommand(NavigateBackAsync);
             NavigateToAddBookViewAsyncCommand = new AsyncRelayCommand(NavigateToAddBookViewAsync);
 
@@ -68,6 +71,14 @@ namespace Media_Tracker.ViewModel
             DisplayedBooks = AllBooks; // Start by showing all Books, which is set to "All books" in BookViewModel init
         }
 
+        // Generates test books if database doesn't have any books. 
+        public async Task CreateTestBooksAsync()
+        {
+            foreach (var book in AllBooks)
+            {
+                await dataService.AddBookAsync(book); // Add each book to the database
+            }
+        }
 
         [RelayCommand]
         private async Task NavigateBackAsync()
@@ -85,32 +96,59 @@ namespace Media_Tracker.ViewModel
         }
 
 
-        // Only used in the AddMovieView to add a movie
         [RelayCommand]
-        private void AddBook()
+        private async Task AddBook()
         {
             if (NewBook != null)
-
             {
+                Debug.WriteLine("NewBook is not null. Attempting to add book to database\n");
+                await dataService.AddBookAsync(NewBook);
                 AllBooks.Add(NewBook);
-                BookAdded?.Invoke(this, NewBook.BookTitle); // Raise the event
-                Debug.WriteLine($"Movie {NewBook.BookTitle} has been added to the 'All Movies Collection'. \n");
-                NewBook = new Book() { ReleaseDate = DateTime.Today }; // Reset for next entry
+                BookAdded?.Invoke(this, NewBook.BookTitle);
+                Debug.WriteLine($"Book {NewBook.BookTitle} has been added.\n");
+                NewBook = new Book() { ReleaseDate = DateTime.Today };
             }
-
             else
             {
-                Debug.WriteLine("Unable to add book, book cannot be 'null' \n");
+                Debug.WriteLine("Unable to add book, book cannot be 'null'\n");
+            }
+        }
+
+        public async Task LoadBooksAsync()
+        {
+            if (!_isDataLoaded)
+            {
+                // Load books from the database
+                var booksFromDb = await dataService.GetBooksAsync();
+                foreach (var book in booksFromDb)
+                {
+                    AllBooks.Add(book);
+                }
+                _isDataLoaded = true;
             }
         }
 
         [RelayCommand]
-        private void DeleteBook()
+        private async Task DeleteBook()
         {
-            if (SelectedBook!= null)
+            if (SelectedBook != null)
             {
-                AllBooks.Remove(SelectedBook);
-                SelectedBook = null; // Reset the selection
+                try
+                {
+                    Debug.WriteLine($"Attempting to delete book: {SelectedBook.BookTitle}");
+                    await dataService.DeleteBookAsync(SelectedBook);
+                    AllBooks.Remove(SelectedBook);
+                    Debug.WriteLine($"Book {SelectedBook.BookTitle} has been deleted.\n");
+                    SelectedBook = null;
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error deleting book: {ex.Message}\n");
+                }
+            }
+            else
+            {
+                Debug.WriteLine("No book selected to delete.\n");
             }
         }
 

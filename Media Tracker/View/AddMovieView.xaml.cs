@@ -1,7 +1,7 @@
 using Media_Tracker.ViewModel;
 
-namespace Media_Tracker.View
-{
+namespace Media_Tracker.View;
+
     public partial class AddMovieView : ContentPage
     {
         public AddMovieView(MovieViewModel viewModel)
@@ -16,4 +16,3 @@ namespace Media_Tracker.View
             await DisplayAlert("Movie Added", $"Movie \"{movieTitle}\" has been added", "OK");
         }
     }
-}

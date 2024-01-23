@@ -26,10 +26,10 @@ public static class MauiProgram
             return dataService;
         });
 
-        // Register ViewModels
-        builder.Services.AddSingleton<BookViewModel>();
+        // Register ViewModels with DataService
         builder.Services.AddSingleton(s => new MovieViewModel(s.GetRequiredService<DataService>()));
-        builder.Services.AddSingleton<TvShowViewModel>();
+        builder.Services.AddSingleton(s => new TvShowViewModel(s.GetRequiredService<DataService>()));
+        builder.Services.AddSingleton(s => new BookViewModel(s.GetRequiredService<DataService>()));
         builder.Services.AddSingleton<BaseViewModel>();
         builder.Services.AddSingleton<MainPage>();
 

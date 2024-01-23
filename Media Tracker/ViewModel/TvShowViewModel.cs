@@ -1,15 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Media_Tracker.Model;
-using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Windows.Input;
 
 namespace Media_Tracker.ViewModel
 {
     public partial class TvShowViewModel : ObservableObject
     {
+
         public IAsyncRelayCommand NavigateBackAsyncCommand { get; }
         public IAsyncRelayCommand NavigateToAddTvShowViewAsyncCommand { get; }
 
@@ -39,9 +38,14 @@ namespace Media_Tracker.ViewModel
         [ObservableProperty]
         TvShow newTvShow = new TvShow(); // For adding a new TvShow in the AddTvShowView
 
+        private readonly DataService dataService;
 
-        public TvShowViewModel()
+        private bool _isDataLoaded = false;
+
+
+        public TvShowViewModel(DataService dataService)
         {
+            this.dataService = dataService;
             NavigateBackAsyncCommand = new AsyncRelayCommand(NavigateBackAsync);
             NavigateToAddTvShowViewAsyncCommand = new AsyncRelayCommand(NavigateToAddTvShowViewAsync);
 
@@ -71,6 +75,15 @@ namespace Media_Tracker.ViewModel
             DisplayedTvShows = AllTvShows; // Start by showing all TvShows
         }
 
+        // Generates test tv shows if database doesn't have any tv shows. 
+        public async Task CreateTestTvShowsAsync()
+        {
+            foreach (var tvShow in AllTvShows)
+            {
+                await dataService.AddTvShowAsync(tvShow); // Add each tv show to the database
+            }
+        }
+
         [RelayCommand]
         private async Task NavigateBackAsync()
         {
@@ -87,32 +100,61 @@ namespace Media_Tracker.ViewModel
         }
 
 
-
         [RelayCommand]
-        private void AddTvShow()
+        private async Task AddTvShow()
         {
             if (NewTvShow != null)
             {
+                Debug.WriteLine("NewTvShow is not null. Attempting to add TV show to database\n");
+                await dataService.AddTvShowAsync(NewTvShow);
                 AllTvShows.Add(NewTvShow);
-                TvShowAdded?.Invoke(this, NewTvShow.TvShowTitle); // Raise the event
-                Debug.WriteLine($"TvShow {NewTvShow.TvShowTitle} has been added to the 'All TvShows Collection'. \n");
-                NewTvShow = new TvShow() { ReleaseDate = DateTime.Today }; // Reset for next entry
+                TvShowAdded?.Invoke(this, NewTvShow.TvShowTitle);
+                Debug.WriteLine($"TV Show {NewTvShow.TvShowTitle} has been added.\n");
+                NewTvShow = new TvShow() { ReleaseDate = DateTime.Today };
             }
             else
             {
-                Debug.WriteLine("Unable to add TvShow, TvShow cannot be 'null' \n");
+                Debug.WriteLine("Unable to add TV show, TV show cannot be 'null'\n");
             }
         }
 
         [RelayCommand]
-        private void DeleteTvShow()
+        private async Task DeleteTvShow()
         {
             if (SelectedTvShow != null)
             {
-                AllTvShows.Remove(SelectedTvShow);
-                SelectedTvShow = null; // Reset the selection
+                try
+                {
+                    Debug.WriteLine($"Attempting to delete TV show: {SelectedTvShow.TvShowTitle}");
+                    await dataService.DeleteTvShowAsync(SelectedTvShow);
+                    AllTvShows.Remove(SelectedTvShow);
+                    Debug.WriteLine($"TV Show {SelectedTvShow.TvShowTitle} has been deleted.\n");
+                    SelectedTvShow = null;
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error deleting TV show: {ex.Message}\n");
+                }
+            }
+            else
+            {
+                Debug.WriteLine("No TV show selected to delete.\n");
             }
         }
+
+        public async Task LoadTvShowsAsync()
+        {
+            if (!_isDataLoaded)
+            {
+                var tvShowsFromDb = await dataService.GetTvShowsAsync();
+                foreach (var tvShow in tvShowsFromDb)
+                {
+                    AllTvShows.Add(tvShow);
+                }
+                _isDataLoaded = true;
+            }
+        }
+
 
 
         [RelayCommand]
