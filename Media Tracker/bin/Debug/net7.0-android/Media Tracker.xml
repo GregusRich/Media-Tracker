@@ -165,13 +165,13 @@
             <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.AddMovieCommand"/>.</summary>
         </member>
         <member name="P:Media_Tracker.ViewModel.MovieViewModel.AddMovieCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.AddMovie"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.AddMovie"/>.</summary>
         </member>
         <member name="F:Media_Tracker.ViewModel.MovieViewModel.deleteMovieCommand">
             <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.DeleteMovieCommand"/>.</summary>
         </member>
         <member name="P:Media_Tracker.ViewModel.MovieViewModel.DeleteMovieCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.DeleteMovie"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Media_Tracker.ViewModel.MovieViewModel.DeleteMovie"/>.</summary>
         </member>
         <member name="F:Media_Tracker.ViewModel.MovieViewModel.navigateToAddMovieViewCommand">
             <summary>The backing field for <see cref="P:Media_Tracker.ViewModel.MovieViewModel.NavigateToAddMovieViewCommand"/>.</summary>

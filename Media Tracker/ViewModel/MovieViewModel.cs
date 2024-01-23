@@ -1,12 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Microsoft.Maui.Controls;
 using Media_Tracker.Model;
-using Media_Tracker.View;
-using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Windows.Input;
 
 namespace Media_Tracker.ViewModel
 {
@@ -41,9 +37,13 @@ namespace Media_Tracker.ViewModel
         [ObservableProperty]
         Movie newMovie = new Movie(); // For adding a new movie in the AddMovieView
 
+        private readonly DataService dataService;
 
-        public MovieViewModel()
+        private bool _isDataLoaded = false;
+
+        public MovieViewModel(DataService dataService)
         {
+            this.dataService = dataService;
             NavigateBackAsyncCommand = new AsyncRelayCommand(NavigateBackAsync);
             NavigateToAddMovieViewAsyncCommand = new AsyncRelayCommand(NavigateToAddMovieViewAsync);
 
@@ -70,6 +70,15 @@ namespace Media_Tracker.ViewModel
             DisplayedMovies = AllMovies; // Start by showing all movies
         }
 
+        // Generates test movies if database doesn't have any movies. 
+        public async Task CreateTestMoviesAsync()
+        {
+            foreach (var movie in AllMovies)
+            {
+                await dataService.AddMovieAsync(movie); // Add each movie to the database
+            }
+        }
+
 
         [RelayCommand]
         private async Task NavigateBackAsync()
@@ -86,36 +95,75 @@ namespace Media_Tracker.ViewModel
             }
         }
 
-
-
         // Only used in the AddMovieView to add a movie
         [RelayCommand]
-        private void AddMovie()
+        private async Task AddMovie()
         {
-            if (NewMovie != null) 
-
+            try
             {
-                AllMovies.Add(NewMovie);
-                MovieAdded?.Invoke(this, NewMovie.MovieTitle); // Raise the event
-                Debug.WriteLine($"Movie {NewMovie.MovieTitle} has been added to the 'All Movies Collection'. \n");
-                NewMovie = new Movie() { ReleaseDate = DateTime.Today }; // Reset for next entry
+                // If Movie object is not null 
+                if (NewMovie != null)
+
+                {
+                    Debug.WriteLine("NewMovie is not null. Attempting to add movie to run dataService.AddMovieAsync()\n\n");
+                    await dataService.AddMovieAsync(NewMovie); // Add to db first
+                    AllMovies.Add(NewMovie); // Then add to collection 
+                    MovieAdded?.Invoke(this, NewMovie.MovieTitle); // Raise the event
+                    Debug.WriteLine($"Movie {NewMovie.MovieTitle} has been added to the 'All Movies Collection'. \n\n");
+                    NewMovie = new Movie() { ReleaseDate = DateTime.Today }; // Reset for next entry
+                }
+
+                else
+                {
+                    Debug.WriteLine("Unable to add movie, movie cannot be 'null' \n"); 
+                }
             }
 
-            else
+            catch (Exception ex)
+            { 
+                // Log the exception
+                Debug.WriteLine($"Unable to add movie error: {ex.Message}");
+            }
+        }
+
+        public async Task LoadMoviesAsync()
+        {
+            if (!_isDataLoaded)
             {
-                Debug.WriteLine("Unable to add movie, movie cannot be 'null' \n");
+                // Load movies from the database
+                var moviesFromDb = await dataService.GetMoviesAsync();
+                foreach (var movie in moviesFromDb)
+                {
+                    AllMovies.Add(movie);
+                }
+                _isDataLoaded = true;
             }
         }
 
         [RelayCommand]
-        private void DeleteMovie()
+        public async Task DeleteMovie()
         {
             if (SelectedMovie != null)
             {
-                AllMovies.Remove(SelectedMovie);
-                SelectedMovie = null; // Reset the selection
+                try
+                {
+                    Debug.WriteLine($"Attempting to delete movie: {SelectedMovie.MovieTitle}");
+                    await dataService.DeleteMovieAsync(SelectedMovie);
+                    AllMovies.Remove(SelectedMovie);
+                    Debug.WriteLine($"Movie {SelectedMovie.MovieTitle} has been successfully deleted.\n\n");
+                    SelectedMovie = null; // Reset the selected movie
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error deleting movie: {ex.Message}");
+                }
+            }
+            else
+            {
+                Debug.WriteLine("No movie selected to delete.\n\n");
             }
         }
+
 
         // Navigate to the Add Movie Page
         [RelayCommand]
